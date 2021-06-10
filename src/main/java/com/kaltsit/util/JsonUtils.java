@@ -8,7 +8,7 @@ package com.kaltsit.util;
 public class JsonUtils {
 
     public static String format(String jsonStr) {
-        if(isEmpty(jsonStr)) {
+        if(StringUtils.isEmpty(jsonStr)) {
             throw new RuntimeException("jsonStr 为空");
         }
         jsonStr = jsonStr.trim();
@@ -28,10 +28,6 @@ public class JsonUtils {
             }
         }
         return sb.toString();
-    }
-
-    static boolean isEmpty(String str) {
-        return str == null || str.isEmpty();
     }
 
 }
